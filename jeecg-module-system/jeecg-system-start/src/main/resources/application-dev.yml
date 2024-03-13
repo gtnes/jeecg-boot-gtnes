@@ -139,7 +139,7 @@ spring:
         # 初始化大小，最小，最大
         initial-size: 5
         min-idle: 5
-        maxActive: 20
+        maxActive: 1000
         # 配置获取连接等待超时的时间
         maxWait: 60000
         # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
@@ -268,6 +268,20 @@ jeecg:
     password: 
     type: STANDALONE
     enabled: true
+  # ChartGPT对接配置
+  ai-chat:
+    # 是否开启；必须。
+    enabled: false
+    # openAi接口秘钥，填写自己的apiKey；必须。
+    apiKey: "？？？？"
+    # openAi域名，有代理就填代理的域名。默认：openAI官方apiHost
+    apiHost: "https://api.openai.com"
+    # 超时时间单位:s。默认 60s
+    timeout: 60
+    # 本地代理地址
+#    proxy:
+#      host: "http://127.0.0.1"
+#      port: "7890"
 #cas单点登录
 cas:
   prefixUrl: http://cas.example.org:8443/cas
