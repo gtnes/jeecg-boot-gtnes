@@ -3,7 +3,7 @@ package org.jeecg.config;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.annotation.Resource;
+import javax.annotation.Resource;
 
 import org.jeecg.common.api.CommonAPI;
 import org.jeecg.common.system.vo.DictModel;

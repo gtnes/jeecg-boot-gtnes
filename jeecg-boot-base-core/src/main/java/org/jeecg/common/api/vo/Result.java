@@ -1,7 +1,8 @@
 package org.jeecg.common.api.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.jeecg.common.constant.CommonConstant;
 
@@ -14,7 +15,7 @@ import java.io.Serializable;
  * @date  2019年1月19日
  */
 @Data
-@Schema(description="接口返回对象")
+@ApiModel(value="接口返回对象", description="接口返回对象")
 public class Result<T> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -22,31 +23,31 @@ public class Result<T> implements Serializable {
 	/**
 	 * 成功标志
 	 */
-	@Schema(description = "成功标志")
+	@ApiModelProperty(value = "成功标志")
 	private boolean success = true;
 
 	/**
 	 * 返回处理消息
 	 */
-	@Schema(description = "返回处理消息")
+	@ApiModelProperty(value = "返回处理消息")
 	private String message = "";
 
 	/**
 	 * 返回代码
 	 */
-	@Schema(description = "返回代码")
+	@ApiModelProperty(value = "返回代码")
 	private Integer code = 0;
 	
 	/**
 	 * 返回数据对象 data
 	 */
-	@Schema(description = "返回数据对象")
+	@ApiModelProperty(value = "返回数据对象")
 	private T result;
 	
 	/**
 	 * 时间戳
 	 */
-	@Schema(description = "时间戳")
+	@ApiModelProperty(value = "时间戳")
 	private long timestamp = System.currentTimeMillis();
 
 	public Result() {
